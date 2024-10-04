@@ -1,0 +1,160 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+.tabla-periodica {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* Distribuye 18 columnas como en la tabla periódica */
+    gap: 4px; /* Espaciado entre elementos */
+    justify-items: center;
+    align-items: center;
+}
+.elemento {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8ef5d6;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
+
+.elemento:hover {
+    transform: scale(1.1);
+}
+
+
+/* Estilos específicos por grupo */
+.elemento[data-grupo="10"] { 
+    background-color: #fcfcfc;
+    background-color: transparent;
+    border: none; /* Remueve el borde */
+    cursor: default; /* Cambia el cursor para que no parezca clickeable */
+    pointer-events: none; /* Desactiva la interacción */
+ } /* Grupo 1: Alcalinos */
+./* Elemento que muestra 010 en lugar del símbolo */
+.elemento[data-grupo="10"]::before {
+    content: "010";
+    font-size: 18px;
+    color: #000;
+}
+
+/* Grupo 1: Alcalinos */
+.elemento[data-grupo="1"] {
+    background-color: #ffcccb; /* Rojo claro */
+}
+
+/* Grupo 2: Alcalinotérreos */
+.elemento[data-grupo="2"] {
+    background-color: #add8e6; /* Azul claro */
+}
+
+/* Grupo 3 */
+.elemento[data-grupo="3"] {
+    background-color: #f4a460; /* Marrón claro */
+}
+
+/* Grupo 4 */
+.elemento[data-grupo="4"] {
+    background-color: #d8bfd8; /* Lavanda */
+}
+
+/* Grupo 5 */
+.elemento[data-grupo="5"] {
+    background-color: #dda0dd; /* Orquídea */
+}
+
+/* Grupo 6 */
+.elemento[data-grupo="6"] {
+    background-color: #ffdead; /* Amarillo claro */
+}
+
+/* Grupo 7 */
+.elemento[data-grupo="7"] {
+    background-color: #ffb6c1; /* Rosa claro */
+}
+
+/* Grupo 8 */
+.elemento[data-grupo="8"] {
+    background-color: #d3d3d3; /* Gris claro */
+}
+
+/* Grupo 9 */
+.elemento[data-grupo="9"] {
+    background-color: #b0c4de; /* Azul acero claro */
+}
+
+/* Grupo 17: Halógenos */
+.elemento[data-grupo="17"] {
+    background-color: #ffb347; /* Naranja claro */
+}
+
+/* Grupo 18: Gases nobles */
+.elemento[data-grupo="18"] {
+    background-color: #98fb98; /* Verde claro */
+}
+
+/* Estilos para la información del elemento */
+.info-elemento {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.info-elemento h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+#info-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.encabezado {
+    text-align: center;
+    background-color: #41b645;
+    color: white;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 5px solid #dfffe0;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.encabezado h2 {
+    margin: 5px 0;
+    font-size: 1.4 em;
+}
+
+.encabezado .estudiantes {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.estudiantes p {
+    margin: 0;
+}
